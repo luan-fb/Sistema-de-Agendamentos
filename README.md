@@ -1,4 +1,9 @@
+<div align="center">
+  
 # Sistema de Gerenciamento de Agendamentos
+  
+<img src="https://github.com/luan-fb/Sistema-de-Agendamentos/blob/main/img/Logo.jpeg?raw=true?raw=true" width="300">
+</div>
 
 
 Este é um sistema de gerenciamento de agendamentos desenvolvido em Java com interface gráfica usando Swing. Ele oferece funcionalidades abrangentes para cadastrar, buscar, remover e atualizar clientes, profissionais, serviços e agendamentos. O sistema utiliza uma conexão JDBC (Java Database Connectivity) para interagir com um banco de dados MySQL. Além das operações básicas de CRUD (Create, Read, Update, Delete), o sistema também oferece recursos avançados, como busca por diferentes critérios, exibição de listas de clientes, profissionais, serviços e agendamentos cadastrados, proporcionando uma visão abrangente do estado atual do sistema. 
@@ -32,6 +37,10 @@ Para configurar a conexão JDBC com o banco de dados:
 
 1. Abra o projeto em sua IDE.
 2. Execute a classe `Program.java` para iniciar o sistema.
+
+<div align="center">
+<img src="https://github.com/luan-fb/Sistema-de-Agendamentos/blob/main/img/Programa%20.gif?raw=true?raw=true" width="600">
+</div>
 
 ## Funcionalidades
 
