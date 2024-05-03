@@ -3,6 +3,7 @@ package Aplicaçao;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -19,17 +20,26 @@ public class Program extends JFrame{
 	        setTitle("Sistema de Gerenciamento de Agendamentos");
 	        setSize(800, 600);
 	        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	        setLocationRelativeTo(null); // Centralizar na tela
+	        setLocationRelativeTo(null); 
+	        ImageIcon icon = new ImageIcon("img/Logo.jpeg");
+	        setIconImage(icon.getImage());
+
 	        initUI();
+
 	    }
 
 	    private void initUI() {
 	        setLayout(new BorderLayout());
+	        mainPanel = new JPanel(new BorderLayout());
 
-	        // Menu Bar
+	        
+	        ImageIcon backgroundImage = new ImageIcon("img/Logo.jpeg");
+	        JLabel backgroundLabel = new JLabel(backgroundImage);
+	        mainPanel.add(backgroundLabel, BorderLayout.CENTER);
+	       
 	        JMenuBar menuBar = new JMenuBar();
 	        
-	        // Menu Clientes
+	        
 	        JMenu menuClientes = new JMenu("Clientes");
 	        
 	        JMenuItem clienteCadastrar = new JMenuItem("Cadastrar Cliente");
@@ -55,7 +65,7 @@ public class Program extends JFrame{
 	        menuBar.add(menuClientes);
 	        
 	        
-	        //Menu Profissionais
+	        
 	        JMenu menuProfissionais = new JMenu("Profissionais");
 
 	        JMenuItem ProfissionalCadastrar = new JMenuItem("Cadastrar Profissional");
@@ -81,7 +91,7 @@ public class Program extends JFrame{
 	        menuBar.add(menuProfissionais);
 
 	        
-	        //Menu Serviços
+	        
 	        JMenu menuServicos = new JMenu("Serviços");
 	        
 	        JMenuItem servicoCadastrar = new JMenuItem("Cadastrar Serviço");
@@ -138,12 +148,10 @@ public class Program extends JFrame{
 
 	        setJMenuBar(menuBar);
 
-	      
-	        mainPanel = new JPanel(new CardLayout());
-	        mainPanel.add(new JLabel("Bem-vindo ao Sistema de Gerenciamento"), "home");
 	        add(mainPanel, BorderLayout.CENTER);
+	        
 
-	        // Status bar
+	        
 	        JLabel statusBar = new JLabel("Pronto");
 	        add(statusBar, BorderLayout.SOUTH);
 	    }
